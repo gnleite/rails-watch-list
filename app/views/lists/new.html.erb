@@ -1,8 +1,16 @@
-<h1>New list</h1>
+<div class="list-container">
+  <h1>New list</h1>
 
-<%= simple_form_for @list do |f|%>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
-
-<%= link_to 'Back', lists_path %>
+  <%= simple_form_for @list do |f|%>
+    <%= f.input :name %>
+    <div class="row justify-content-between" id="lists-btn">
+      <div class="btn btn-success col-4">
+        <%= f.button :submit%>
+      </div>
+      <div class="btn btn-outline-secondary col-4">
+        <%= link_to 'Back', lists_path%>
+        <%# I dont know why it stoped to work %>
+      </div>
+    </div>
+  <% end %>
+</div>
