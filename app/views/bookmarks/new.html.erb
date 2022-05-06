@@ -3,6 +3,7 @@
 <%= simple_form_for [ @list, @bookmark ] do |f|%>
   <%= f.association :movie %>
   <%= f.input :comment %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
 
